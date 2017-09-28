@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
-
+#include <thread>
+using namespace std;
+class C{
+public:
+    void operator()(){
+        cout<<"Method from the class "<<endl;
+    }
+};
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    C c;
+    thread t(c);
+    t.join();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
