@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		848080481F7D9EEE007B7269 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848080471F7D9EEE007B7269 /* main.cpp */; };
+		848080551F7DA257007B7269 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848080541F7DA257007B7269 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		848080421F7D9EEE007B7269 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		848080501F7DA257007B7269 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +35,19 @@
 /* Begin PBXFileReference section */
 		848080441F7D9EEE007B7269 /* Concurrency-programing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Concurrency-programing"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848080471F7D9EEE007B7269 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		848080521F7DA257007B7269 /* Mutexes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Mutexes; sourceTree = BUILT_PRODUCTS_DIR; };
+		848080541F7DA257007B7269 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		848080411F7D9EEE007B7269 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8480804F1F7DA257007B7269 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				848080461F7D9EEE007B7269 /* Concurrency-programing */,
+				848080531F7DA257007B7269 /* Mutexes */,
 				848080451F7D9EEE007B7269 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				848080441F7D9EEE007B7269 /* Concurrency-programing */,
+				848080521F7DA257007B7269 /* Mutexes */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +81,14 @@
 				848080471F7D9EEE007B7269 /* main.cpp */,
 			);
 			path = "Concurrency-programing";
+			sourceTree = "<group>";
+		};
+		848080531F7DA257007B7269 /* Mutexes */ = {
+			isa = PBXGroup;
+			children = (
+				848080541F7DA257007B7269 /* main.cpp */,
+			);
+			path = Mutexes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +111,23 @@
 			productReference = 848080441F7D9EEE007B7269 /* Concurrency-programing */;
 			productType = "com.apple.product-type.tool";
 		};
+		848080511F7DA257007B7269 /* Mutexes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848080561F7DA257007B7269 /* Build configuration list for PBXNativeTarget "Mutexes" */;
+			buildPhases = (
+				8480804E1F7DA257007B7269 /* Sources */,
+				8480804F1F7DA257007B7269 /* Frameworks */,
+				848080501F7DA257007B7269 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mutexes;
+			productName = Mutexes;
+			productReference = 848080521F7DA257007B7269 /* Mutexes */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +138,10 @@
 				ORGANIZATIONNAME = "Imad Collin";
 				TargetAttributes = {
 					848080431F7D9EEE007B7269 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					848080511F7DA257007B7269 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,6 +160,7 @@
 			projectRoot = "";
 			targets = (
 				848080431F7D9EEE007B7269 /* Concurrency-programing */,
+				848080511F7DA257007B7269 /* Mutexes */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				848080481F7D9EEE007B7269 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8480804E1F7DA257007B7269 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848080551F7DA257007B7269 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +304,22 @@
 			};
 			name = Release;
 		};
+		848080571F7DA257007B7269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		848080581F7DA257007B7269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -262,6 +337,15 @@
 			buildConfigurations = (
 				8480804C1F7D9EEE007B7269 /* Debug */,
 				8480804D1F7D9EEE007B7269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848080561F7DA257007B7269 /* Build configuration list for PBXNativeTarget "Mutexes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848080571F7DA257007B7269 /* Debug */,
+				848080581F7DA257007B7269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
