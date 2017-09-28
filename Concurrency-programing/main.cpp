@@ -15,11 +15,18 @@ public:
         cout<<"Method from the class "<<endl;
     }
 };
+
+void function_out(){
+    cout<<"Method outside the class"<<endl;
+}
 int main(int argc, const char * argv[]) {
     C c;
     thread t(c);
-    t.join();
+    thread t2(function_out);
+    if(t.joinable())
+        t.join();
+    if(t2.joinable())
+        t2.join();
     
-    std::cout << "Hello, World!\n";
     return 0;
 }
